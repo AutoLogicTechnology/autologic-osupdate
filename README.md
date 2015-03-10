@@ -1,15 +1,12 @@
-OS Update
-=========
+# Yum
 
-AutoLogic Technology's OS update role, useful for updating all packages on a fresh VM or Cloud based system, which often are pre-computed or gold images created weeks if not months prior to being used.
+Autologic Technology's RHEL Yum management role. Ideal for managing repository files, the central Yum configuration file, and running OS updates, and more.
 
-License
--------
+## License
 
-GPL v3
+MIT.
 
-Author Information
-------------------
+## Author Information
 
 - Michael Crilly
 - Autologic Technology Ltd
