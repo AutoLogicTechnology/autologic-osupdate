@@ -1,8 +1,0 @@
----
-
-- name: Update everything using PKG (FreeBSD)
-  command: /usr/sbin/pkg upgrade -y
-  when: autologic_osupdate_use_pkg_freebsd
-  register: update_result
-  changed_when: "'Your packages are up to date.' not in update_result.stdout"
-  tags: autologic_osupdate_task_update_pkg_freebsd

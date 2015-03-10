@@ -1,27 +1,21 @@
 ---
 
-# RedHat
-- include: rhel/default.yml
+# - include: repositories.yml
+#   when: ansible_os_family == "RedHat"
+#   tags: autologic_osupdate_play_repositories
+
+- include: update.yml
   when: ansible_os_family == "RedHat"
-  tags: autologic_osupdate_play_redhat
+  tags: autologic_osupdate_play_update
 
-- include: rhel/disabled_repositories.yml
-  when: ansible_os_family == "RedHat"
-  tags: autologic_osupdate_play_redhat_exclusions
+# - include: disabled_repositories.yml
+#   when: ansible_os_family == "RedHat"
+#   tags: autologic_osupdate_play_redhat_exclusions
 
-- include: rhel/enabled_repositories.yml
-  when: ansible_os_family == "RedHat"
-  tags: autologic_osupdate_play_redhat_inclusions
+# - include: enabled_repositories.yml
+#   when: ansible_os_family == "RedHat"
+#   tags: autologic_osupdate_play_redhat_inclusions
 
-- include: rhel/exclude_include_repositories.yml
-  when: ansible_os_family == "RedHat"
-  tags: autologic_osupdate_play_redhat_include_exclude
-
-# FreeBSD
-- include: freebsd/default.yml
-  when: ansible_os_family == "FreeBSD" and autologic_osupdate_use_pkg_freebsd
-  tags: autologic_osupdate_play_freebsd_pkg
-
-- include: freebsd/ports.yml
-  when: ansible_os_family == "FreeBSD" and autologic_osupdate_use_ports_freebsd
-  tags: autologic_osupdate_play_freebsd_ports
+# - include: exclude_include_repositories.yml
+#   when: ansible_os_family == "RedHat"
+#   tags: autologic_osupdate_play_redhat_include_exclude
