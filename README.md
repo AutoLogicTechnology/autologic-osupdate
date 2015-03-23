@@ -62,7 +62,6 @@ autologic_software_repositories:
     sslclientcert: ""
     sslclientkey: ""
     ssl_check_cert_permissions: true
-    use_proxy: false
     proxy: ""
     proxy_username: ""
     proxy_password: ""
