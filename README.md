@@ -38,7 +38,7 @@ autologic_applied_repositories:
   - 'External Repository'
 ```
 
-You can also take advantage of practically every available option a Yum repository file has to offer:
+You can also take advantage of practically every available option a Yum repository file has to offer. Here is a selection of what's in the ```Yum.conf``` man page, but you can add any key:value entries you want as they're simply printed to out by the templating system. No validaton is done.
 
 ```yaml
 autologic_software_repositories:
