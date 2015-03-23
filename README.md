@@ -1,6 +1,8 @@
-# Yum
+# Autologic Package
 
-Autologic Technology's RHEL Yum management role. Ideal for managing repository files, the central Yum configuration file, and running OS updates, and more.
+Manage RHEL packages and repositories from a single role.
+
+## Version 0.0.1
 
 ## License
 

@@ -1,12 +1,18 @@
 ---
 
+- include: repositories.yml
+  when: ansible_os_family == "RedHat"
+  tags:
+    - autologic_package
+    - autologic_packpage_play_repositories
+
 # - include: repositories.yml
 #   when: ansible_os_family == "RedHat"
 #   tags: autologic_osupdate_play_repositories
 
-- include: update.yml
-  when: ansible_os_family == "RedHat"
-  tags: autologic_osupdate_play_update
+# - include: update.yml
+#   when: ansible_os_family == "RedHat"
+#   tags: autologic_osupdate_play_update
 
 # - include: disabled_repositories.yml
 #   when: ansible_os_family == "RedHat"

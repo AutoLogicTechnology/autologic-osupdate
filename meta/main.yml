@@ -1,8 +1,8 @@
 ---
 galaxy_info:
   author: Michael Crilly
-  description: AutoLogic RHEL OS Update module
-  company: AutoLogic Technology Ltd
-  license: license (BSD)
-  min_ansible_version: 1.8
+  description: Autologic Package module
+  company: Autologic Technology Ltd
+  license: MIT
+  min_ansible_version: 1.8.4
 dependencies: []
