@@ -1,6 +1,12 @@
 # Autologic Packages
 
+**Not ready: this role isn't complete. It's a work-in-progress, and can't be considered uable until a version is set.**
+
 Manage RHEL packages and repositories from a single role.
+
+## Version
+
+N/A
 
 ## Work flow
 
@@ -110,10 +116,6 @@ autologic_applied_software:
 ```
 
 The relevant repositories will be installed on the target system, as will all applicable software. This preps your systems and makes them ready to receive software configuration and service startup commands.
-
-## Version
-
-0.0.1
 
 ## License
 

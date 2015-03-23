@@ -3,32 +3,32 @@
 # 
 # Manual changes will likely be overwritten.
 
-[{{repositoryid}}]
-name={{name}}
-enabled={{'1' if enabled|default(true) else '0'}}
-baseurl={{baseurl}}
-metalink={{metalink|default("")}}
-mirrorlist={{mirrorlist|default("")}}
-gpgcheck={{'1' if gpgcheck|default(true) else '0'}}
-repo_gpgcheck={{'1' if repo_gpgcheck|default(true) else '0'}}
-exclude={{exclude|default("")}}
-includepkgs={{includepkg|default("")}}
-keepalive={{'1' if keepalive|default(false) else '0'}}
-timeout={{timeout|default(30)}}
-retries={{retries|default(3)}}
-throttle={{throttle|default(0)}}
-bandwidth={{bandwidth|default(0)}}
-sslcacert={{sslcacert|default("")}}
-sslverify={{sslverify|default(true)}}
-sslclientcert={{sslclientcert|default("")}}
-sslclientkey={{sslclientkey|default("")}}
-ssl_check_cert_permissions={{ssl_check_cert_permissions|default(true)}}
-{% if use_proxy|default(false) %}
+[{{item.repositoryid}}]
+name={{item.name}}
+enabled={{'1' if item.enabled|default(true) else '0'}}
+baseurl={{item.baseurl}}
+{% if item.metalink is defined %}metalink={{item.metalink}}{% endif %}
+{% if item.mirrorlist is defined %}mirrorlist={{item.mirrorlist}}{% endif %}
+{% if item.gpgcheck is defined %}gpgcheck={{'1' if item.gpgcheck else '0'}}{% endif %}
+{% if item.repo_gpgcheck is defined %}repo_gpgcheck={{'1' if item.repo_gpgcheck else '0'}}{% endif %}
+{% if item.exclude is defined %}exclude={{item.exclude}}{% endif %}
+{% if item.includepkg is defined %}includepkgs={{item.includepkg}}{% endif %}
+{% if item.keepalive is defined %}keepalive={{'1' if item.keepalive else '0'}}{% endif %}
+{% if item.timeout is defined %}timeout={{item.timeout}}{% endif %}
+{% if item.retries is defined %}retries={{item.retries}}{% endif %}
+{% if item.throttle is defined %}throttle={{item.throttle}}{% endif %}
+{% if item.bandwidth is defined %}bandwidth={{item.bandwidth}}{% endif %}
+{% if item.sslcacert is defined %}sslcacert={{item.sslcacert}}{% endif %}
+{% if item.sslverify is defined %}sslverify={{item.sslverify}}{% endif %}
+{% if item.sslclientcert is defined %}sslclientcert={{item.sslclientcert}}{% endif %}
+{% if item.sslclientkey is defined %}sslclientkey={{item.sslclientkey}}{% endif %}
+{% if item.ssl_check_cert_permissions is defined %}ssl_check_cert_permissions={{item.ssl_check_cert_permissions}}{% endif %}
+{% if item.use_proxy|default(false) %}
 proxy= ""
 proxy_username= ""
 proxy_password= ""
 username= ""
 password= ""
 {% endif %}
-cost={{cost|default(1000)}}
-skip_if_unavailable={{skip_if_unavailable|default(false)}}
+{% if item.cost is defined %}cost={{item.cost}}{% endif %}
+{% if item.skip_if_unavailable is defined %}skip_if_unavailable={{item.skip_if_unavailable}}{% endif %}
