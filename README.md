@@ -66,7 +66,7 @@ autologic_software_repositories:
     skip_if_unavailable: false
 ```
 
-Once you have your custom repositories in place, if any, then you can begin defining "software stacks", which are used to apply groups of packages to your groups of hosts. Here is an example set of packs:
+Once you have your custom repositories in place, if any, then you can begin defining "software stacks", which are used to apply groups of packages to your groups of hosts. Here is an example set of stacks:
 
 ```yaml
 autologic_software_stacks:
