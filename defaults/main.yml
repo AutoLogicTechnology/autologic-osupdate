@@ -6,6 +6,5 @@ autologic_manage_packages: true
 autologic_software_repositories: []
 autologic_applied_repositories: []
 
-autologic_software_packs: []
-autologic_applied_packs: []
-autologic_applied_packages: []
+autologic_software_stacks: []
+autologic_applied_stacks: []

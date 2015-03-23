@@ -1,4 +1,4 @@
-# Autologic Package
+# Autologic Packages
 
 Manage RHEL packages and repositories from a single role.
 
@@ -36,12 +36,12 @@ You can also take advantage of practically every available option a Yum reposito
 
 ```yaml
 autologic_software_repositories:
-  - name: 'EPEL'
+  - name: 'Super Custom Repository'
+    enabled: true
     repositoryid: ""
     baseurl: ""
     metalink: ""
     mirrorlist: ""
-    enabled: true
     gpgcheck: true
     repo_gpgcheck: true
     exclude: []
@@ -109,7 +109,7 @@ autologic_applied_software:
   - 'Centralised Logging'
 ```
 
-The relevant repositories will be installed on the local system, as will all applicable software. This preps your systems and makes them ready to receive software configuration and service startup commands.
+The relevant repositories will be installed on the target system, as will all applicable software. This preps your systems and makes them ready to receive software configuration and service startup commands.
 
 ## Version
 
