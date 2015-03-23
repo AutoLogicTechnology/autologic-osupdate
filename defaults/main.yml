@@ -3,48 +3,9 @@
 autologic_manage_repositories: true
 autologic_manage_packages: true
 
-autologic_package_repositories: []
+autologic_software_repositories: []
 autologic_applied_repositories: []
 
-# Example package_repositories entry:
-#
-# Note that 'name:' is used in the
-# applied_repositories list as a way of
-# enabling repositories on a specific host
-
-# autologic_package_repositories:
-#   - name: 'EPEL'
-#     repositoryid: ""
-#     baseurl: ""
-#     metalink: ""
-#     mirrorlist: ""
-#     enabled: true
-#     gpgcheck: true
-#     repo_gpgcheck: true
-#     exclude: []
-#     includepkgs: []
-#     keepalive: true
-#     timeout: 30
-#     retries: 3
-#     throttle: 0
-#     bandwidth: 0
-#     sslcacert: ""
-#     sslverify: true
-#     sslclientcert: ""
-#     sslclientkey: ""
-#     ssl_check_cert_permissions: true
-#     use_proxy: false
-#     proxy: ""
-#     proxy_username: ""
-#     proxy_password: ""
-#     username: ""
-#     password: ""
-#     cost: 1000
-#     skip_if_unavailable: false
-
-autologic_package_packs: []
-
-# Example package_pack entry:
-autologic_package_packs:
-  - name: "Varnish Cache"
-
+autologic_software_packs: []
+autologic_applied_packs: []
+autologic_applied_packages: []
