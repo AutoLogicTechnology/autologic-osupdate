@@ -1,6 +1,6 @@
 # Autologic Packages
 
-**Not ready: this role isn't complete. It's a work-in-progress, and can't be considered uable until a version is set.**
+**Not ready: this role isn't complete. It's a work-in-progress, and can't be considered usable until a version is set.**
 
 Manage RHEL packages and repositories from a single role.
 
