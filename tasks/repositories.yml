@@ -1,10 +1,18 @@
 ---
 
+# - name: Setup system repositories
+#   template:
+#     src: 'yum-repository.j2'
+#     dest: "/etc/yum.repos.d/{{item.repositoryid}}.repo"
+#     mode: 0600
+#     owner: 'root'
+#     group: 'root'
+#   with_items: autologic_software_repositories
+
 - name: Setup system repositories
   template:
     src: 'yum-repository.j2'
-    dest: "/etc/yum.repos.d/{{item.repositoryid}}.repo"
+    dest: "/etc/yum.repos.d/autologic-packages.repo"
     mode: 0600
     owner: 'root'
     group: 'root'
-  with_items: autologic_software_repositories
