@@ -1,7 +1,11 @@
 ---
 
 - include: repositories.yml
-  when: ansible_os_family == "RedHat"
   tags:
     - autologic_package
-    - autologic_packpage_play_repositories
+    - autologic_package_play_repositories
+
+- include: stacks.yml
+  tags:
+    - autologic_package
+    - autologic_package_play_stacks

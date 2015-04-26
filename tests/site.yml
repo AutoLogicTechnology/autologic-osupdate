@@ -1,0 +1,38 @@
+---
+- hosts: all
+  sudo: true
+  vars:
+    autologic_software_repositories:
+      - name: 'Example 01'
+        repositoryid: 'E01'
+        baseurl: 'http://nowhere'
+        random_key: with a random value
+      - name: 'Example 02'
+        repositoryid: 'E02'
+        baseurl: 'http://nowhere'
+        random_key: with a random value
+      - name: 'EPEL'
+        rpm: 'http://fedora.mirror.serversaustralia.com.au/epel/6/x86_64/epel-release-6-8.noarch.rpm'
+
+    autologic_software_stacks:
+      - name: 'Web Server'
+        packages:
+          - name: 'httpd'
+            state: present
+          - name: 'php'
+            state: present
+      - name: 'Database'
+        packages:
+          - name: 'mysql-server'
+            state: present
+
+    autologic_applied_repositories:
+      - 'EPEL'
+      - 'Example 01'
+
+    autologic_applied_stacks:
+      - 'Web Server'
+      - 'Database'
+
+  roles:
+    - autologic-packages

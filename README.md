@@ -1,12 +1,10 @@
 # Autologic Packages
 
-**Not ready: this role isn't complete. It's a work-in-progress, and can't be considered usable until a version is set.**
-
 Manage RHEL packages and repositories from a single role.
 
 ## Version
 
-N/A
+1.0.0
 
 ## Work flow
 
@@ -28,6 +26,8 @@ autologic_software_repositories:
   - name: 'External Repository'
     repositoryid: 'external'
     baseurl: 'http://external.url.example/rhel/'
+  - name: 'EPEL'
+    rpm: 'https://url/epel.rpm'
 ```
 
 The 'name:' value is used in the ```autologic_applied_repositories``` list as a way of enabling repositories for a specific group of hosts:
@@ -38,7 +38,9 @@ autologic_applied_repositories:
   - 'External Repository'
 ```
 
-You can also take advantage of practically every available option a Yum repository file has to offer. Here is a selection of what's in the ```Yum.conf``` man page, but you can add any key:value entries you want as they're simply printed to out by the templating system. No validaton is done.
+If the repository item in the dictionary has an 'rpm' key, then the remote RPM will be downloaded and installed (by YUM) automatically for you.
+
+You can also take advantage of practically every available option a Yum repository file has to offer. Here is a selection of what's in the ```Yum.conf``` man page, but you can add any key:value entries you want as they're simply printed to out by the templating system. **No validaton is done.**
 
 ```yaml
 autologic_software_repositories:
@@ -115,6 +117,10 @@ autologic_applied_software:
 ```
 
 The relevant repositories will be installed on the target system, as will all applicable software. This preps your systems and makes them ready to receive software configuration and service startup commands.
+
+## Tests
+
+See the 'tests' directory for further details.
 
 ## License
 

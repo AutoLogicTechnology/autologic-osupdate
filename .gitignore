@@ -1,0 +1,3 @@
+.vagrant
+tests/.vagrant
+.DS_Store

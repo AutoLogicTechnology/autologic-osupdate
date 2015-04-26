@@ -1,0 +1,10 @@
+---
+
+- name: Install applied software stacks
+  yum:
+    name: "{{item.1.name}}"
+    state: "{{item.1.state}}"
+  with_subelements:
+    - autologic_software_stacks
+    - packages
+  when: item.0.name in autologic_applied_stacks

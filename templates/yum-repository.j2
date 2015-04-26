@@ -4,8 +4,13 @@
 # Manual changes will likely be overwritten.
 
 {% for repository in autologic_software_repositories %}
+{% if repository['name'] in autologic_applied_repositories and 'rpm' not in repository %}
 [{{repository['repositoryid']}}]
 {% for key,value in repository.iteritems() %}
+{% if key != "repositoryid" %}
 {{key}}={{value}}
+{% endif %}
 {% endfor %}
+{% endif %}
 {% endfor %}
+

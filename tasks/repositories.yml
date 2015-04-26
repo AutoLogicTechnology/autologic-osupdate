@@ -1,14 +1,5 @@
 ---
 
-# - name: Setup system repositories
-#   template:
-#     src: 'yum-repository.j2'
-#     dest: "/etc/yum.repos.d/{{item.repositoryid}}.repo"
-#     mode: 0600
-#     owner: 'root'
-#     group: 'root'
-#   with_items: autologic_software_repositories
-
 - name: Setup system repositories
   template:
     src: 'yum-repository.j2'
@@ -16,3 +7,10 @@
     mode: 0600
     owner: 'root'
     group: 'root'
+
+- name: Install repository RPMs
+  yum:
+    name: "{{item.rpm}}"
+    state: 'present'
+  with_items: autologic_software_repositories
+  when: '"rpm" in item'
