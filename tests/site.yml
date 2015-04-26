@@ -7,10 +7,12 @@
         repositoryid: 'E01'
         baseurl: 'http://nowhere'
         random_key: with a random value
+        enabled: 'false'
       - name: 'Example 02'
         repositoryid: 'E02'
         baseurl: 'http://nowhere'
         random_key: with a random value
+        enabled: 'false'
       - name: 'EPEL'
         rpm: 'http://fedora.mirror.serversaustralia.com.au/epel/6/x86_64/epel-release-6-8.noarch.rpm'
 

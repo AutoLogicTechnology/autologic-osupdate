@@ -4,7 +4,7 @@ Manage RHEL packages and repositories from a single role.
 
 ## Version
 
-1.0.0
+1.0.1
 
 ## Work flow
 
