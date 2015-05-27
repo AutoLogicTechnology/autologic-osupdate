@@ -103,7 +103,7 @@ Now you're ready to apply repositories and software to your hosts:
 autologic_applied_repositories:
   - 'My Company Repository'
 
-autologic_applied_software:
+autologic_applied_stacks:
   - 'Static Content Cache'
 ```
 
@@ -112,7 +112,7 @@ autologic_applied_software:
 autologic_applied_repositories:
   - 'External Repository'
 
-autologic_applied_software:
+autologic_applied_stacks:
   - 'Centralised Logging'
 ```
 
